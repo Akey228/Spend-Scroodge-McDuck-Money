@@ -61,6 +61,12 @@ function tovarQuantity(tovar) {
 let counts = document.querySelectorAll(".tovars-line .tovar");
 counts.forEach(tovarQuantity);
 
+// func return money in header
+function returnMoney() {
+    money = 12434013552490;
+    headerMoney.textContent = `У вас сейчас ${money}$.`
+}
+
 
 
 

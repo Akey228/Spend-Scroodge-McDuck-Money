@@ -28,8 +28,7 @@ header {
   background-color: var(--highlight-background);
   padding: 1em;
   text-align: center;
-  z-index: 999;
-  /* position: fixed;  */
+  z-index: 5;
   width: 100%;
 }
 
@@ -71,6 +70,7 @@ header {
   flex-direction: column;
   align-items: center;
   /* margin-top: 30px; */
+  cursor: pointer;
 }
 
 .header-title {
@@ -231,9 +231,10 @@ main {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
+  height: 2000px;
   position: absolute;
-  z-index: 1000000;
+  z-index: 6;
+  margin-top: -250px;
   display: none;
 }
 
