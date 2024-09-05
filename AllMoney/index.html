@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spend all of Scroodge McDuck money</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <!-- <ion-icon name="bag"></ion-icon> -->
+    <div class="header-container">
+      <h1 class="header-title">Скрудж Макдак</h1>
+      <div class="header-app">
+        <div class="return-money app" onclick="returnMoney()">
+          <ion-icon name="sync"></ion-icon>
+          <span>Upgrade money</span>
+        </div>
+        <div class="header-subtitle" id="value">У вас сейчас 12434013552490$.</div>
+        <div class="basket app" onmouseover="busketOnMouseOver()">
+          <div class="basket-quantity">
+            <span class="basket-quantity-zero">0</span>
+          </div>
+          <ion-icon name="bag"></ion-icon>
+          <span class="basket-quantity-text">Basket</span>
+
+        </div>
+      </div>
+
+      <p class="header-call-to-action">Успей потрать их всех!</p>
+    </div>
+    </div>
+  </header>
+
+  <div class="busket-modal-walpapper">
+    <div class="busket-modal">
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="win">
+
+    <div class="win-wrapper">
+      <h1>You win</h1>
+      <p>Congratulations! You were able to spend all of Scrooge McDuck's money, with a total budget of $12.5 trillion
+      </p>
+    </div>
+  </div>
+
+
+  <main>
+    <div class="tovars-line">
+
+      <div class="tovar">
+        <div class="tovar-img-div">
+          <img src="public/1.Apple.png" alt="apple">
+        </div>
+        <span class="tovar-name">Apple</span>
+        <div class="tovar-price-div">
+          <span class="num-price tovar-price">1</span>
+          <span class="dollar-price tovar-price">$</span>
+        </div>
+        <div class="btn-plus-minus">
+          <button class="btn-remove a">-</button>
+          <button class="button-pisa" data-value="1">Add to cart</button>
+          <button class="span-quantity a" data-value="1">0</button>
+        </div>
+      </div>
+
+
+      <div class="tovar">
+        <div class="tovar-img-div">
+          <img src="public/2.orangeJuice.png" alt="orange juice" style="width: 90%;">
+        </div>
+        <span class="tovar-name">Orange juice</span>
+        <div class="tovar-price-div">
+          <span class="num-price tovar-price">5</span>
+          <span class="dollar-price tovar-price">$</span>
+        </div>
+        <div class="btn-plus-minus">
+          <button class="btn-remove a">-</button>
+          <button class="button-pisa" data-value="5">Add to cart</button>
+          <button class="span-quantity a" data-value="5">0</button>
+        </div>
+      </div>
+
+      <div class="tovar">
+        <div class="tovar-img-div">
+          <img src="public/2. Shrek-tapki.png" alt="Shrek's snickers">
+        </div>
+        <span class="tovar-name">Shrek's snickers</span>
+        <div class="tovar-price-div">
+          <span class="num-price tovar-price">10</span>
+          <span class="dollar-price tovar-price">$</span>
+        </div>
+        <div class="btn-plus-minus">
+          <button class="btn-remove a">-</button>
+          <button class="button-pisa" data-value="10">Add to cart</button>
+          <button class="span-quantity a" data-value="10">0</button>
+        </div>
+      </div>
+
+      <div class="tovar">
+        <div class="tovar-img-div">
+          <img src="public/iphone15.png" alt="apple" style="width: 60%;">
+        </div>
+        <span class="tovar-name">Iphone 15 pro max (1tb)</span>
+        <div class="tovar-price-div">
+          <span class="num-price tovar-price">1600</span>
+          <span class="dollar-price tovar-price">$</span>
+        </div>
+        <button onclick="minusPrice(event)" class="button" data-value="1600">Add to cart</button>
+      </div>
+
+
+      <div class="tovar">
+        <div class="tovar-img-div">
+          <img src="public/RubicksKubick.png" alt="apple" style="width: 140%;">
+        </div>
+        <span class="tovar-name">Rubik's Cube</span>
+        <div class="tovar-price-div">
+          <span class="num-price tovar-price">15</span>
+          <span class="dollar-price tovar-price">$</span>
+        </div>
+        <button onclick="minusPrice(event)" class="button" data-value="15">Add to cart</button>
+      </div>
+
+
+      <div class="tovar">
+        <div class="tovar-img-div">
+          <img src="public/Lamborghini.png" alt="apple" style="width: 120%;">
+        </div>
+        <span class="tovar-name">Lamborghini Huracan</span>
+        <div class="tovar-price-div">
+          <span class="num-price tovar-price">300 000</span>
+          <span class="dollar-price tovar-price">$</span>
+        </div>
+        <button onclick="minusPrice(event)" class="button" data-value="300000">Add to cart</button>
+      </div>
+
+
+      <div class="tovar">
+        <div class="tovar-img-div">
+          <img src="public/ferari.png" alt="apple" style="width: 150%;">
+        </div>
+        <span class="tovar-name">Ferari F8</span>
+        <div class="tovar-price-div">
+          <span class="num-price tovar-price">277 000</span>
+          <span class="dollar-price tovar-price">$</span>
+        </div>
+        <button onclick="minusPrice(event)" class="button" data-value="277000">Add to cart</button>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+  <footer>
+
+  </footer>
+
+
+  <script src="js/counter.js"></script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
+
+
+<!-- Основные цвета
+
+Улучши дизайн .win не особо изменяя
+
+Сделай красивый дизай ндля .win .Окно должно быть на весь экран, с затемненым фоном и текстом на весь экран
+
+Золотой цвет: #ffd700 (используется в примере выше)
+Богатый коричневый цвет: #964B00
+Тёмный синий цвет: #032B44
+Яркий зелёный цвет: #34C759
+Цвета для текста
+
+Основной текст: #333 (тёмный серый цвет)
+Второстепенный текст: #666 (средний серый цвет)
+Акцентный текст: #999 (светлый серый цвет)
+Заголовки: #333 (тёмный серый цвет) или #ffd700 (золотой цвет)
+Цвета для фона
+
+Основной фон: #f2f2f2 (светлый серый цвет)
+Второстепенный фон: #e5e5e5 (средний серый цвет)
+Фон для выделенных элементов: #ffd700 (золотой цвет) или #964B00 (богатый коричневый цвет)
+Цвета для кнопок и элементов
+
+Основная кнопка: #ffd700 (золотой цвет)
+Второстепенная кнопка: #964B00 (богатый коричневый цвет)
+Выделенный элемент: #34C759 (яркий зелёный цвет)
+Цвета для границ и теней
+
+Основная граница: #333 (тёмный серый цвет)
+Второстепенная граница: #666 (средний серый цвет)
+Тень: rgba(0, 0, 0, 0.2) (тёмная тень) -->
+
+background-color: #ffc400; -->
